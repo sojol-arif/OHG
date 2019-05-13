@@ -1,0 +1,62 @@
+/* banner */
+.ic-products-banner{
+    position: relative;
+    img{
+        width:100%;
+        height: auto;
+    }
+    .ic-banner-mid-text{
+        position: absolute;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        ul{
+            display: inline-block;
+            padding-left:0;
+            li{
+                list-style-type: none;
+                display: inline-block;
+                font-size:15px;
+                text-transform: uppercase;
+                @include body-font;
+                font-weight: bold;
+                padding-right:6px;
+                &:not(:last-child)::after{
+                    padding-left:6px;
+                    content:"/"
+                }
+            }
+        }
+    }
+}
+#ic-product-banner-midsection{
+    .ic-product-filter{
+        display: flex;
+        justify-content: flex-end;
+        @extend %filter-select-tag;
+    }
+}
+
+ul.ic-products-pagination{
+    display: inline-flex !important;
+    li.page-item{
+        &.active{
+            .page-link{
+                background-color:$primary;
+                border-color:$primary;
+                color:$white;
+            }
+        }
+        a.page-link{
+            color: #111;
+            border-color: transparent;
+            border-radius: 100%;
+            margin-right:5px;
+            border:1px solid $text-color;
+        }
+    }
+}
+
+   

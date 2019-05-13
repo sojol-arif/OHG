@@ -1,0 +1,52 @@
+// Style for the footer
+
+.footer-top{
+    background-color: $box-color;
+    border-top:1px solid rgba(255, 91, 38, 0.502);
+    p.ic-footer-ist-p{
+        margin-top:30px;
+    }
+    .footer-links{
+        margin-top:37px;
+        margin-bottom:37px;
+        li {
+            position: relative;
+            margin-bottom: 5px;
+            .fa {
+                color: $primary;
+                min-width: 30px;
+            }
+        }
+    }
+   @extend %social-link;
+    .ic-guidehelp-ul{
+        li{
+            a{
+                color:$text-color;
+                line-height: 1.6;
+                @include transition-btn;
+                &:hover{
+                    color:$primary;
+                    text-decoration: underline !important;
+                }
+            }
+        }
+    }
+    .ic-footer-last-col-p{
+        margin-top:30px;
+        margin-bottom:43px;
+    }
+}
+.footer-bottom{
+    background-color:$text-color;
+    text-align: center;
+    p{
+        padding-top:30px;
+        padding-bottom:30px;
+        color:$white;
+        span{
+            color:$primary;
+            text-transform: uppercase;
+        }
+    }
+}

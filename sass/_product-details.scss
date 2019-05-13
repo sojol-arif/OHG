@@ -1,0 +1,159 @@
+.ic-font-18-bold-uppercase{
+    @include karla-font-serif;
+    font-size:18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom:18px;
+}
+#product-details-content{
+    // slider
+    #ic-product-details-slider{
+        .item{
+            margin-bottom: 60px;
+            ul#image-gallery{
+                list-style: none outside none;
+                padding-left: 0;
+                margin: 0;
+                position: relative;
+                li{
+                    // box-shadow: 0px 2px 7.68px 0.32px rgba(32, 32, 32, 0.05);
+                    height: auto;
+                    img{
+                        width:100%;
+                        height: auto;
+                        width:540px !important;
+                    }
+                }
+            }
+            ul.lSPager.lSGallery{
+                width:446px !important;
+                margin-left:auto;
+                margin-right:auto;
+                margin-top:0;
+                li{
+                    margin-top:40px;
+                    margin-bottom: 40px;
+                    width:100px !important;
+                    height:100px;
+                    box-shadow: 0px 2px 7.68px 0.32px rgba(32, 32, 32, 0.05);
+                    margin-right:10px !important;
+                    &:last-child{
+                        margin-right: 0 !important;
+                    }
+                    a{
+
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    .ic-product-details-right{
+        h3{
+        }
+        .ic-product-priceReview{
+            margin-top:33px;
+            margin-bottom:33px;
+            position: relative;
+            h2{
+                font-size:36px;
+                color:$primary;
+                @include karla-font-serif;
+            }
+            .rev-type{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right:0;
+                ul{
+                    li{
+                        list-style-type: none;
+                        i{
+                            color:$secondary;
+                            margin-right:5px;
+                        }
+                    }
+                }
+            }
+        }
+        .ic-fabricCare{
+            margin-top:31px;
+            margin-bottom:31px;
+            h4{
+                margin-bottom:10px;
+            }
+        }
+        @extend %filter-select-tag;
+        .theme-select{
+            &::after{
+                font-size: 24px;
+                top:0 !important;
+            }
+        }
+        @extend %quantity-number;
+        .ic-addcartwish-ul{
+            margin-top:30px;
+            margin-bottom:30px;
+            li{
+                &:first-child{margin-right:30px}
+                a{
+                    padding:12px 33px;
+                    display: block;
+                    border:1px solid $text-color;
+                    background-color: $white;
+                    color:$text-color;
+                    &:hover{
+                        background-color: $text-color;
+                        color:$white;
+                    }
+                    i{
+                        font-size: 24px;
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin-right:20px
+                    }
+                }
+            }
+        }
+        .ic-footer-social{
+            li{
+                a{
+                    position: relative;
+                    display: inline-block;
+                    span.ic-tooltiptext{
+                        position: absolute;
+                        text-transform: uppercase;
+                        font-size: 15px;
+                        width: 190px;
+                        text-align: left;
+                        left: 15px;
+                        bottom: -37px;
+                        color:$text-color;
+                        @include karla-font-serif;
+                        display: none;
+                    }
+                    &:hover{
+                        color:$white;
+                        background-color:$text-color;
+                        border:1px solid $text-color;
+                        span.ic-tooltiptext{
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+        @extend %social-link;
+    }
+    @extend %h2-with-three-border-bottom;
+}
+
+#ic-related-products{
+
+    @extend %single-row-product-display-orna-hijab;
+    .single-arrival{
+        text-align:center;
+    }
+}

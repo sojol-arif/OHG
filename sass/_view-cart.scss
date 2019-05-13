@@ -1,0 +1,148 @@
+#view-cart{
+    .ic-cash-back{
+        text-align: center;
+        background-color: $box-color;
+        box-shadow: 0px 2px 7.68px 0.32px rgba(32, 32, 32, 0.1);
+        padding-top:18px;
+        padding-bottom:18px;
+        h2{
+            @include karla-font-serif;
+            font-size: 48px;
+            margin-bottom:0;
+        }
+        h3{
+            font-weight: 400;
+            @include karla-font-serif;
+        }
+    }
+    .alert.ic-alert-items{
+        background-color:$box-color;
+        border: none;
+        margin-top:42px;
+        margin-bottom:32px;
+        vertical-align: middle;
+        padding-top:18px;
+        padding-bottom:18px;
+        i.fa-shopping-cart{
+            font-size: 22px;
+        }
+        .close {
+            border: 1px solid $primary;
+            color: $primary;
+            padding: 0 !important;
+            position: absolute;
+            right: 20px;
+            width: 20px;
+            font-size: 14px;
+            height: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            box-shadow:0 0 1px 0px $primary; 
+        }
+    }
+    .ic-viewcart-item{
+        table{
+            position: relative;
+            tr{
+                border:1px solid $text-color;
+                margin-bottom: 40px;
+                display: block;
+                @include transition-btn;
+                &:hover{
+                    border:1px solid $secondary;
+                    background-color: #f5f5f5;
+                }
+            }
+            td{
+                vertical-align: middle;
+                border-top:none;
+                .star-list{
+                    span{
+                        color:$secondary;
+                    }
+                }
+                .quantity-input{
+                    border: 1px solid #202020;
+                    border-radius: 0;
+                    width: 95px;
+                }
+            }
+            .ic-quantity-td{
+                padding-left:40px;
+            }
+            .ic-total-price-td{
+                padding-right:50px;
+            }
+            .ic-quantity-td,
+            .ic-unit-price-td,
+            .ic-total-price-td{
+
+                /* vertical align middle */
+                vertical-align: top;
+                padding-top:54px;
+
+                /*vertical align middle */
+                // vertical-align:  middle;
+
+                @include karla-18-bold-serif;
+                h5{
+                    @include karla-18-bold-serif;
+                }
+            }
+            .actions{
+                button{
+                    /* center top */
+                    position: absolute;
+                    right: -4px;
+                    transform:translate(-50%,-50%);
+
+                    /* coloring */
+                    border:none;
+                    background-color: transparent;
+                    i{
+                        color:#000;
+                        border:1px solid #000;
+                        width:20px;
+                        height:20px;
+                        padding-top:1px;
+                    }
+                }
+            }
+            @extend %quantity-number;
+            .pt_Quantity {
+                input[type=number]
+                {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+    /* -- apply now and cart totals --*/
+    .head-left {
+        margin-bottom: 16px;
+        font-size: 18px;
+        text-transform: uppercase;
+        a{
+            color: $primary;
+        }
+    }
+    .coupon-form {
+        text-transform: uppercase;
+        .form-control {
+            width: 271px;
+            background-color:$box-color;
+            border: none;
+            &::-webkit-input-placeholder,
+            &::-moz-placeholder,
+            &::-ms-input-placeholder,
+            &::-moz-placeholder { 
+                color: #000;
+            }
+        }
+        .form-control::-webkit-input-placeholder,
+        .form-control::-moz-placeholder,
+        .form-control::-ms-input-placeholder{
+            color:#000;
+        }
+    }
+}
